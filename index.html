@@ -23,17 +23,17 @@
       <div class="navbutton"><a href="...">Home Page </a></div>           
     </nav> 
       
-    <div class="photo" id="image">
+    <div class="photo" id="image" onclick="alert('Has pulsado sobre la imagen')">
     <div class="content">
      </nav> 
      <h3>Last Recipies</h3>
     </div>
     </div>
-  <div id="login"><form id="form" method="post" action="http://YOUR_DOMAIN_HERE/login/login.php">
+  <div id="login"><form id="form" method="post" action="http://YOUR_DOMAIN_HERE/login/login.php" onsubmit="enviarLogin()">
   Username: <input type="text" name="username" size="15" id="user" /><br />
   <br />Password: <input type="password" name="passwort" id="pass" size="15" /><br />
   <div align="center">
-  <br /><input type="submit" onclick="enviarLogin()" value="Login" />
+  <br /><input type="submit" value="Login" />
   </div>
 </form>
 <h3>Join All the recipes </h3><p>In the news for you</p>
@@ -66,7 +66,7 @@
 		<option class="_self" value="swordfish">Smoked swordfish</option>
 		<option class="_self" value="pumpkins">Stuffed pumpkins</option>
 		</select>
-		<input type="button" onclick="btnComboBox()" value="Go" />
+		<input type="button" onchange="btnComboBox()" value="Go" />
 	</form>
       </div>
  </aside>

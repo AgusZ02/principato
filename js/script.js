@@ -3,13 +3,7 @@ let contenido = document.getElementsByTagName("h2")
 contenido.item(1).innerHTML="Segundo menú"
 
 
-function gestorEventos() {
-    var imagen = document.getElementById("image");
-    imagen.onclick = function(){
-      alert("Has pulsado sobre la imagen");
-    }
-  }
-window.onload=gestorEventos;
+
 
 
 var usuario = document.getElementById("user");
@@ -28,9 +22,8 @@ usuario.onfocus=function(){
 
 
 let comboBox = document.getElementById("combobox");
-comboBox.addEventListener("click", btnComboBox)
+comboBox.addEventListener("change", btnComboBox)
 function btnComboBox(){
-
     console.log(comboBox.value);
 }
 
