@@ -23,6 +23,7 @@ usuario.onfocus=function(){
 
 let comboBox = document.getElementById("combobox");
 comboBox.addEventListener("change", btnComboBox)
+
 function btnComboBox(){
     console.log(comboBox.value);
 }
