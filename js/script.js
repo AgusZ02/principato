@@ -6,7 +6,7 @@ contenido.item(1).innerHTML="Segundo menú"
 
 
 
-var usuario = document.getElementById("user");
+usuario = document.getElementById("user");
 usuario.value='tu@email';
 usuario.onblur=function(){
     if (usuario.value=='') {
@@ -34,17 +34,25 @@ function enviarLogin() {
     console.log("Login tratado correctamente")
     console.log(nombreUsuario + " " + contrasena)
 }
+let i = 0;
 
-var reloj = setInterval(carruselImagenes, 3000);
+let arrayImg = ["fresas","limon","mandarinas","manzanas","melon","sesamo"];
+let carrusel = true;
+
 
 function carruselImagenes() {
-    
-    let imagen = document.getElementById("image")
-    let ubiImagenes = "./images/[LABO II]_Imagenes/"
-    const fs = require("fs")
-    fs.readdirSync(ubiImagenes).forEach((archivo) => {
-        console.log(archivo)
-        
-   })
-
+    let reloj = setInterval(function(){
+        if (carrusel) {
+            let imagen = document.getElementById("image");
+            let ubiImagenes = "url(./images/labo2/" + arrayImg[i % arrayImg.length] + ".jpg)";
+            console.log(ubiImagenes);
+            ubiImagenes = "url(../images/labo2/fresas.jpg)";
+            imagen.style.backgroundImage = ubiImagenes;
+            i++;
+            imagen.onclick=function() {
+                carrusel = !carrusel;
+            }
+        }
+    }, 3000);
 }
+window.onload=carruselImagenes;
