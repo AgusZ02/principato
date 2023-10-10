@@ -46,7 +46,6 @@ function carruselImagenes() {
             let imagen = document.getElementById("image");
             let ubiImagenes = "url(./images/labo2/" + arrayImg[i % arrayImg.length] + ".jpg)";
             console.log(ubiImagenes);
-            ubiImagenes = "url(../images/labo2/fresas.jpg)";
             imagen.style.backgroundImage = ubiImagenes;
             i++;
             imagen.onclick=function() {
